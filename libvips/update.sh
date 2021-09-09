@@ -38,7 +38,7 @@ tar_file="$tar_dir/$( basename -s "$ext" "$full_file")"
 echo Creating archive "$tar_file"
 tar cf "$tar_file" *
 echo Zip...
-rm "$tar_file.gz"
+rm -f "$tar_file.gz"
 gzip --keep "$tar_file"
 echo Brotli...
 rm -f "$tar_file.br"
